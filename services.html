@@ -69,12 +69,24 @@
   
     .left-image {
       height: 100vh;
-      overflow: hidden; 
+      overflow: hidden;
+      display: flex;
+      align-items: flex-start;
     }
   
     .right-image {
       height: 100vh; 
-      overflow: hidden; 
+      overflow: hidden;
+      display: flex;
+      align-items: flex-end;
+    }
+    
+    .left-align img {
+      margin-left: 0;
+    }
+  
+    .right-align img {
+      margin-right: 0;
     }
 
     .service-title {
@@ -111,7 +123,7 @@
   <div class="container text-center">
     <div class="row">
       <div class="col-lg-4">
-        <div class="left-image">
+        <div class="left-image left-align">
           <img src="Service1.jpg" alt="Tattoo Example">
         </div>
       </div>
@@ -144,7 +156,7 @@
       </div>
       
       <div class="col-lg-4">
-        <div class="right-image">
+        <div class="right-image right-align">
           <img src="Service2.png" alt="Piercing Example">
         </div>
       </div>
