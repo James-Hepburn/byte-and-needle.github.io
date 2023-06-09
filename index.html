@@ -75,7 +75,7 @@
         <button class="btn logo-button" id="logoButton">
           <img src="Logo.png" alt="Logo">
         </button>
-        <button class="btn nav-button">SERVICES</button>
+        <button class="btn nav-button" id="servicesButton">SERVICES</button>
         <button class="btn nav-button">GALLERY</button>
         <button class="btn nav-button">ARTISTS</button>
         <button class="btn nav-button">CONTACT</button>
@@ -93,6 +93,12 @@
       var logoButton = document.getElementById('logoButton');
       logoButton.addEventListener('click', function() {
         window.location.href = 'index.html';
+      });
+    });
+    document.addEventListener('DOMContentLoaded', function() {
+      var servicesButton = document.getElementById('servicesButton');
+      servicesButton.addEventListener('click', function() {
+        window.location.href = 'services.html';
       });
     });
   </script>
