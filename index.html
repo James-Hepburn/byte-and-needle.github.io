@@ -72,7 +72,7 @@
   <div class="container-fluid" style="background-color: #002a22;">
     <div class="row align-items-center">
       <div class="col-auto">
-        <button class="btn logo-button">
+        <button class="btn logo-button" id="logoButton">
           <img src="Logo.png" alt="Logo">
         </button>
         <button class="btn nav-button">SERVICES</button>
@@ -88,5 +88,13 @@
   <h1 class="company-name">Byte and Needle</h1>
 
   <script src="js/bootstrap.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var logoButton = document.getElementById('logoButton');
+      logoButton.addEventListener('click', function() {
+        window.location.href = 'index.html';
+      });
+    });
+  </script>
 </body>
 </html>
