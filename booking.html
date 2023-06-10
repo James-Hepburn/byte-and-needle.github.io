@@ -209,6 +209,22 @@
         window.location.href = 'faq.html';
       });
     });
+    
+    document.addEventListener('DOMContentLoaded', function() {
+      var contactForm = document.getElementById('contactForm');
+      contactForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+        var date = document.getElementById('date').value;
+        var time = document.getElementById('time').value;
+        var service = document.getElementById('service').value;
+        var expert = document.getElementById('expert').value;
+        localStorage.setItem('date', date);
+        localStorage.setItem('time', time);
+        localStorage.setItem('service', service);
+        localStorage.setItem('expert', expert);
+        window.location.href = 'confirmation.html';
+      });
+    });
   </script>
 </body>
 </html>
