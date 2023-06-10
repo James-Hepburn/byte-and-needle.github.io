@@ -67,7 +67,7 @@
     textarea.form-control {
       background-color: #002a22;
       color: white;
-      width: 200%;
+      width: 100%; 
     }
 
     .input-area {
@@ -92,15 +92,9 @@
     }
 
     button.send-button {
-      width: 200%; 
+      width: 100%; 
     }
     
-    .col-md-6.order-2,
-    .col-md-6.order-md-1 {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
   </style>
 </head>
 
@@ -121,11 +115,11 @@
     </div>
   </div>
 
-  <h1 class="contact-us d-flex justify-content-center">Contact Us</h1>
+  <h1 class="contact-us">Contact Us</h1> 
 
   <div class="container-fluid">
     <div class="row">
-      <div class="col-md-6 order-2 order-md-1 centered-content">
+      <div class="col-md-6 offset-md-3"> 
         <form id="contactForm">
           <div class="input-area">
             <label for="name" class="form-label" style="color: white;">Name</label>
@@ -146,7 +140,7 @@
         <div id="confirmationMessage" class="confirmation-message"></div>
       </div>
 
-      <div class="col-md-6 order-1 order-md-2 centered-content">
+      <div class="col-md-6 centered-content">
         <div class="centered-content"> 
           <div class="map-container">
             <img src="images/Map.png" alt="Google Maps">
