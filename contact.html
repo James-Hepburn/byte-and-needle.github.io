@@ -70,17 +70,30 @@
       width: 66%;
     }
     
-    .col-md-6 {
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: flex-start;
+    .col-md-12 h6,
+    .col-md-12 p {
+      color: white;
     }
 
     .confirmation-message {
       color: white;
       text-align: center;
       margin-top: 10px;
+    }
+
+    .map-container {
+      display: flex;
+      justify-content: flex-start;
+    }
+
+    .map-container img {
+      width: 100%;
+      max-width: 400px;
+    }
+
+    .business-info {
+      color: white;
+      margin-left: 20px;
     }
   </style>
 </head>
@@ -120,29 +133,31 @@
           <textarea class="form-control" id="message" rows="5" required placeholder="Enter your message"></textarea>
         </div>
         <button type="submit" class="btn btn-primary" style="background-color: #e8992a; width: 66%;">Send</button>
-        <div id="confirmationMessage" class="confirmation-message"></div>
       </form>
+      <div id="confirmationMessage" class="confirmation-message"></div>
     </div>
     <div class="col-md-6">
-      <div class="col-md-12">
-        <h6 style="color: white;">Byte and Needle</h6>
-        <p>
-          277 Elgin St, Ottawa, ON, K2P 0H7<br>
-          byteandneedle@gmail.com<br>
-          613 - 864 - 2095<br>
-        </p>
-        <h6 style="color: white;">Hours</h6>
-        <p>
-          Mon. 10:00 a.m. - 5:00 p.m.<br>
-          Tue. 10:00 a.m. - 6:00 p.m.<br>
-          Wed. 10:00 a.m. - 6:00 p.m.<br>
-          Thu. 10:00 a.m. - 6:00 p.m.<br>
-          Fri. 10:00 a.m. - 6:00 p.m.<br>
-          Sat. 10:00 a.m. - 6:00 p.m.<br>
-          Sun. 10:00 a.m. - 5:00 p.m.<br>
-        </p>
+      <div class="map-container">
+        <img src="images/Map.png" alt="Google Maps">
+        <div class="business-info">
+          <h6>Byte and Needle</h6>
+          <p>
+            277 Elgin St, Ottawa, ON, K2P 0H7<br>
+            byteandneedle@gmail.com<br>
+            613 - 864 - 2095<br>
+          </p>
+          <h6>Hours</h6>
+          <p>
+            Mon. 10:00 a.m. - 5:00 p.m.<br>
+            Tue. 10:00 a.m. - 6:00 p.m.<br>
+            Wed. 10:00 a.m. - 6:00 p.m.<br>
+            Thu. 10:00 a.m. - 6:00 p.m.<br>
+            Fri. 10:00 a.m. - 6:00 p.m.<br>
+            Sat. 10:00 a.m. - 6:00 p.m.<br>
+            Sun. 10:00 a.m. - 5:00 p.m.<br>
+          </p>
+        </div>
       </div>
-      <img src="images/Map.png" alt="Google Maps" style="width: 100%; max-width: 400px;">
     </div>
   </div>
 
