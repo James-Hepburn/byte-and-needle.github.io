@@ -126,11 +126,20 @@
           </div>
           <div class="input-area">
             <label for="service" class="form-label" style="color: white;">Service</label>
-            <input type="service" class="form-control" id="service" required placeholder="Piercing/Tattoo">
+            <select class="form-control" id="service" required>
+              <option value="">Select a service</option>
+              <option value="piercing">Piercing</option>
+              <option value="tattoo">Tattoo</option>
+              <option value="flashart">Flash Art</option>
+            </select>
           </div>
           <div class="input-area">
             <label for="expert" class="form-label" style="color: white;">Expert</label>
-            <input type="expert" class="form-control" id="expert" required placeholder="Gabbie/Emyre">
+            <select class="form-control" id="expert" required>
+              <option value="">Select an expert</option>
+              <option value="Emre">Emre</option>
+              <option value="Gabbie">Gabbie</option>
+            </select>
           </div>
           <div class="input-area">
             <label for="message" class="form-label" style="color: white;">Message</label>
