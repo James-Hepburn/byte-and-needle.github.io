@@ -72,7 +72,6 @@
 
     .input-area {
       margin-bottom: 20px;
-      margin-right: 50px;
     }
 
     .confirmation-message {
@@ -125,7 +124,7 @@
 
   <div class="container-fluid">
     <div class="row">
-      <div class="col-md-6 order-2 order-md-1">
+      <div class="col-md-6 order-2 order-md-1 centered-content">
         <form id="contactForm">
           <div class="input-area">
             <label for="name" class="form-label" style="color: white;">Name</label>
@@ -146,8 +145,8 @@
         <div id="confirmationMessage" class="confirmation-message"></div>
       </div>
 
-      <div class="col-md-6 order-1 order-md-2">
-        <div class="centered-content"> <!-- Added container to center the content -->
+      <div class="col-md-6 order-1 order-md-2 centered-content">
+        <div class="centered-content"> 
           <div class="map-container">
             <img src="images/Map.png" alt="Google Maps">
             <div class="business-info">
@@ -230,7 +229,7 @@
       contactForm.addEventListener('submit', function(event) {
         event.preventDefault();
         var confirmationMessage = document.getElementById('confirmationMessage');
-        confirmationMessage.innerText = 'Thank you for your message! We will get back to you soon.';
+        confirmationMessage.innerText = 'Message sent! We will be in touch shortly.';
         contactForm.reset();
       });
     });
