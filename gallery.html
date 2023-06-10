@@ -63,10 +63,20 @@
       padding-left: 0;
     }
 
+    #imageCarousel {
+      height: 400px;
+    }
+
     .carousel-item {
-      background-size: cover;
-      background-position: center;
-      height: auto;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .carousel-item img {
+      object-fit: cover;
+      height: 100%;
     }
   </style>
 </head>
