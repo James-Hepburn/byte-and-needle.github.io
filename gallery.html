@@ -63,12 +63,8 @@
       padding-left: 0;
     }
 
-    .swiper-container {
-      width: 100%;
+    .carousel-item {
       height: 400px;
-    }
-
-    .swiper-slide {
       background-size: cover;
       background-position: center;
     }
@@ -94,26 +90,44 @@
 
   <h1 class="gallery">Gallery</h1>
 
-  <div class="swiper-container">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide" style="background-image: url('Slide1.jpeg');"></div>
-      <div class="swiper-slide" style="background-image: url('Slide2.jpg');"></div>
-      <div class="swiper-slide" style="background-image: url('Slide3.jpg');"></div>
-      <div class="swiper-slide" style="background-image: url('Slide4.jpg');"></div>
-      <div class="swiper-slide" style="background-image: url('Slide5.jpg');"></div>
-      <div class="swiper-slide" style="background-image: url('Slide6.jpg');"></div>
-      <div class="swiper-slide" style="background-image: url('Slide7.png');"></div>
-      <div class="swiper-slide" style="background-image: url('Slide8.jpg');"></div>
-      <div class="swiper-slide" style="background-image: url('Slide9.jpg');"></div>
-      <div class="swiper-slide" style="background-image: url('Slide10.jpg');"></div>
-      <div class="swiper-slide" style="background-image: url('Slide11.jpg');"></div>
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+      <li data-target="#myCarousel" data-slide-to="3"></li>
+      <li data-target="#myCarousel" data-slide-to="4"></li>
+      <li data-target="#myCarousel" data-slide-to="5"></li>
+      <li data-target="#myCarousel" data-slide-to="6"></li>
+      <li data-target="#myCarousel" data-slide-to="7"></li>
+      <li data-target="#myCarousel" data-slide-to="8"></li>
+      <li data-target="#myCarousel" data-slide-to="9"></li>
+      <li data-target="#myCarousel" data-slide-to="10"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active" style="background-image: url('Slide1.jpeg');"></div>
+      <div class="carousel-item" style="background-image: url('Slide2.jpg');"></div>
+      <div class="carousel-item" style="background-image: url('Slide3.jpg');"></div>
+      <div class="carousel-item" style="background-image: url('Slide4.jpg');"></div>
+      <div class="carousel-item" style="background-image: url('Slide5.jpg');"></div>
+      <div class="carousel-item" style="background-image: url('Slide6.jpg');"></div>
+      <div class="carousel-item" style="background-image: url('Slide7.png');"></div>
+      <div class="carousel-item" style="background-image: url('Slide8.jpg');"></div>
+      <div class="carousel-item" style="background-image: url('Slide9.jpg');"></div>
+      <div class="carousel-item" style="background-image: url('Slide10.jpg');"></div>
+      <div class="carousel-item" style="background-image: url('Slide11.jpg');"></div>
     </div>
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
+    <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
   </div>
 
   <script src="js/bootstrap.js"></script>
-  <script src="js/swiper.min.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       var logoButton = document.getElementById('logoButton');
