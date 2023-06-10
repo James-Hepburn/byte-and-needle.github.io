@@ -67,26 +67,17 @@
     textarea.form-control {
       background-color: #002a22;
       color: white;
-      width: 70%;
+      width: 100%;
     }
 
     .input-area {
       margin-bottom: 20px;
-      margin-left: 170px; 
     }
 
     .confirmation-message {
       color: white;
       text-align: center;
       margin-top: 10px;
-      margin-right: 30px;
-    }
-
-    .map-container {
-      display: flex;
-      justify-content: flex-start;
-      margin-top: 15px;
-      margin-left: -135px;
     }
 
     .map-container img {
@@ -97,30 +88,11 @@
     .business-info {
       color: white;
       margin-top: 15px;
-      margin-left: 55px;
       margin-bottom: 30px;
     }
 
     button.send-button {
-      width: 70%; 
-    }
-
-    /* Mobile Styles */
-    @media (max-width: 767px) {
-      .nav-button,
-      .logo-button {
-        height: 60px;
-        line-height: 60px;
-        font-size: 14px;
-      }
-
-      .contact-us {
-        font-size: 20px;
-      }
-
-      .input-area {
-        margin-left: 0;
-      }
+      width: 100%; 
     }
   </style>
 </head>
@@ -142,9 +114,9 @@
     </div>
   </div>
 
-  <h1 class="contact-us">Contact Us</h1>
+  <h1 class="contact-us d-flex justify-content-center">Contact Us</h1>
 
-  <div class="container">
+  <div class="container-fluid">
     <div class="row">
       <div class="col-md-6 order-2 order-md-1">
         <form id="contactForm">
@@ -195,14 +167,66 @@
 
   <script src="js/bootstrap.js"></script>
   <script>
-    document.getElementById("contactForm").addEventListener("submit", function(event) {
-      event.preventDefault();
-      var confirmationMessage = document.getElementById("confirmationMessage");
-      confirmationMessage.innerHTML = "Thank you for your message!";
-      confirmationMessage.style.display = "block";
-      setTimeout(function() {
-        confirmationMessage.style.display = "none";
-      }, 3000);
+    document.addEventListener('DOMContentLoaded', function() {
+      var logoButton = document.getElementById('logoButton');
+      logoButton.addEventListener('click', function() {
+        window.location.href = 'index.html';
+      });
+    });
+    
+    document.addEventListener('DOMContentLoaded', function() {
+      var servicesButton = document.getElementById('servicesButton');
+      servicesButton.addEventListener('click', function() {
+        window.location.href = 'services.html';
+      });
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+      var galleryButton = document.getElementById('galleryButton');
+      galleryButton.addEventListener('click', function() {
+        window.location.href = 'gallery.html';
+      });
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+      var artistsButton = document.getElementById('artistsButton');
+      artistsButton.addEventListener('click', function() {
+        window.location.href = 'artists.html';
+      });
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+      var contactButton = document.getElementById('contactButton');
+      contactButton.addEventListener('click', function() {
+        window.location.href = 'contact.html';
+      });
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+      var bookingButton = document.getElementById('bookingButton');
+      bookingButton.addEventListener('click', function() {
+        window.location.href = 'booking.html';
+      });
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+      var faqButton = document.getElementById('faqButton');
+      faqButton.addEventListener('click', function() {
+        window.location.href = 'faq.html';
+      });
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+      var contactForm = document.getElementById('contactForm');
+      contactForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+        var name = document.getElementById('name').value;
+        var email = document.getElementById('email').value;
+        var message = document.getElementById('message').value;
+        var confirmationMessage = document.getElementById('confirmationMessage');
+        confirmationMessage.innerHTML = 'Thank you, ' + name + '! Your message has been sent.';
+        contactForm.reset();
+      });
     });
   </script>
 </body>
