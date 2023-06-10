@@ -58,9 +58,21 @@
       text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
       margin-top: 20px; 
     }
+    
+    .col-auto {
+      padding-left: 0;
+    }
+    
+    input.form-control,
+    textarea.form-control {
+      background-color: #002a22;
+      color: white;
+      width: 70%;
+    }
 
     .input-area {
       margin-bottom: 20px;
+      margin-left: 170px; 
     }
 
     .confirmation-message {
@@ -71,7 +83,10 @@
     }
 
     .map-container {
+      display: flex;
+      justify-content: flex-start;
       margin-top: 15px;
+      margin-left: -135px;
     }
 
     .map-container img {
@@ -82,27 +97,12 @@
     .business-info {
       color: white;
       margin-top: 15px;
-      margin-left: 15px;
+      margin-left: 55px;
+      margin-bottom: 30px;
     }
 
     button.send-button {
-      width: 70%;
-    }
-
-    .input-area .form-control {
-      background-color: #002a22;
-      color: white;
-    }
-
-    .input-area .form-control::placeholder {
-      color: white;
-      opacity: 0.5;
-    }
-
-    .input-area .form-control:focus {
-      background-color: #002a22;
-      color: white;
-      box-shadow: none;
+      width: 70%; 
     }
   </style>
 </head>
@@ -126,48 +126,50 @@
 
   <h1 class="contact-us">Contact Us</h1>
 
-  <div class="row">
-    <div class="col-md-6">
-      <form id="contactForm">
-        <div class="input-area">
-          <label for="name" class="form-label">Name</label>
-          <input type="text" class="form-control" id="name" required placeholder="Enter your name">
-        </div>
-        <div class="input-area">
-          <label for="email" class="form-label">Email</label>
-          <input type="email" class="form-control" id="email" required placeholder="Enter your email">
-        </div>
-        <div class="input-area">
-          <label for="message" class="form-label">Message</label>
-          <textarea class="form-control" id="message" rows="5" required placeholder="Enter your message"></textarea>
-        </div>
-        <div class="input-area">
-          <button type="submit" class="btn send-button" style="background-color: #e8992a;">Send</button>
-        </div>
-      </form>
-      <div id="confirmationMessage" class="confirmation-message"></div>
-    </div>
-    
-    <div class="col-md-6">
-      <div class="map-container">
-        <img src="images/Map.png" alt="Google Maps">
-        <div class="business-info">
-          <h6 style="color: #e8992a;">Byte and Needle</h6>
-          <p>
-            277 Elgin St, Ottawa, ON, K2P 0H7<br>
-            byteandneedle@gmail.com<br>
-            613 - 864 - 2095<br>
-          </p>
-          <h6 style="color: #e8992a;">Hours</h6>
-          <p>
-            Mon. 10:00 a.m. - 5:00 p.m.<br>
-            Tue. 10:00 a.m. - 6:00 p.m.<br>
-            Wed. 10:00 a.m. - 6:00 p.m.<br>
-            Thu. 10:00 a.m. - 6:00 p.m.<br>
-            Fri. 10:00 a.m. - 6:00 p.m.<br>
-            Sat. 10:00 a.m. - 6:00 p.m.<br>
-            Sun. 10:00 a.m. - 5:00 p.m.<br>
-          </p>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 order-2 order-md-1">
+        <form id="contactForm">
+          <div class="input-area">
+            <label for="name" class="form-label" style="color: white;">Name</label>
+            <input type="text" class="form-control" id="name" required placeholder="Enter your name">
+          </div>
+          <div class="input-area">
+            <label for="email" class="form-label" style="color: white;">Email</label>
+            <input type="email" class="form-control" id="email" required placeholder="Enter your email">
+          </div>
+          <div class="input-area">
+            <label for="message" class="form-label" style="color: white;">Message</label>
+            <textarea class="form-control" id="message" rows="5" required placeholder="Enter your message"></textarea>
+          </div>
+          <div class="input-area">
+            <button type="submit" class="btn send-button" style="background-color: #e8992a;">Send</button>
+          </div>
+        </form>
+        <div id="confirmationMessage" class="confirmation-message"></div>
+      </div>
+
+      <div class="col-md-6 order-1 order-md-2">
+        <div class="map-container">
+          <img src="images/Map.png" alt="Google Maps">
+          <div class="business-info">
+            <h6 style="color: #e8992a;">Byte and Needle</h6>
+            <p>
+              277 Elgin St, Ottawa, ON, K2P 0H7<br>
+              byteandneedle@gmail.com<br>
+              613 - 864 - 2095<br>
+            </p>
+            <h6 style="color: #e8992a;">Hours</h6>
+            <p>
+              Mon. 10:00 a.m. - 5:00 p.m.<br>
+              Tue. 10:00 a.m. - 6:00 p.m.<br>
+              Wed. 10:00 a.m. - 6:00 p.m.<br>
+              Thu. 10:00 a.m. - 6:00 p.m.<br>
+              Fri. 10:00 a.m. - 6:00 p.m.<br>
+              Sat. 10:00 a.m. - 6:00 p.m.<br>
+              Sun. 10:00 a.m. - 5:00 p.m.<br>
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -195,7 +197,7 @@
         window.location.href = 'gallery.html';
       });
     });
-    
+
     document.addEventListener('DOMContentLoaded', function() {
       var artistsButton = document.getElementById('artistsButton');
       artistsButton.addEventListener('click', function() {
@@ -223,13 +225,16 @@
         window.location.href = 'faq.html';
       });
     });
-    
+
     document.addEventListener('DOMContentLoaded', function() {
       var contactForm = document.getElementById('contactForm');
-      contactForm.addEventListener('submit', function(e) {
-        e.preventDefault();
+      contactForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+        var name = document.getElementById('name').value;
+        var email = document.getElementById('email').value;
+        var message = document.getElementById('message').value;
         var confirmationMessage = document.getElementById('confirmationMessage');
-        confirmationMessage.textContent = 'Thank you for your message!';
+        confirmationMessage.innerHTML = 'Thank you, ' + name + '! Your message has been sent.';
         contactForm.reset();
       });
     });
