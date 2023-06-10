@@ -70,9 +70,11 @@
       width: 66%;
     }
     
-    .col-md-12 h6,
-    .col-md-12 p {
-      color: white;
+    .col-md-6 {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
     }
 
     .confirmation-message {
@@ -118,11 +120,10 @@
           <textarea class="form-control" id="message" rows="5" required placeholder="Enter your message"></textarea>
         </div>
         <button type="submit" class="btn btn-primary" style="background-color: #e8992a; width: 66%;">Send</button>
+        <div id="confirmationMessage" class="confirmation-message"></div>
       </form>
-      <div id="confirmationMessage" class="confirmation-message"></div>
     </div>
     <div class="col-md-6">
-      <img src="images/Map.png" alt="Google Maps" style="width: 100%; max-width: 400px;">
       <div class="col-md-12">
         <h6 style="color: white;">Byte and Needle</h6>
         <p>
@@ -141,6 +142,7 @@
           Sun. 10:00 a.m. - 5:00 p.m.<br>
         </p>
       </div>
+      <img src="images/Map.png" alt="Google Maps" style="width: 100%; max-width: 400px;">
     </div>
   </div>
 
@@ -197,8 +199,6 @@
 
     document.getElementById('contactForm').addEventListener('submit', function(event) {
       event.preventDefault();
-      // Perform form submission logic here
-      // Display confirmation message
       document.getElementById('confirmationMessage').textContent = 'Message sent. We will be in touch shortly.';
     });
   </script>
