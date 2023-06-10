@@ -53,21 +53,10 @@
     .contact-us {
       color: #e8992a;
       font-family: "Copperplate Gothic Light", sans-serif;
-      font-size: 28px; 
+      font-size: 4vw; 
       text-align: center;
       text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
       margin-top: 20px; 
-    }
-    
-    .col {
-      padding-left: 0;
-    }
-    
-    input.form-control,
-    textarea.form-control {
-      background-color: #002a22;
-      color: white;
-      width: 70%;
     }
 
     .input-area {
@@ -82,8 +71,6 @@
     }
 
     .map-container {
-      display: flex;
-      justify-content: flex-start;
       margin-top: 15px;
     }
 
@@ -95,12 +82,10 @@
     .business-info {
       color: white;
       margin-top: 15px;
-      margin-left: 55px;
-      margin-bottom: 30px;
     }
 
     button.send-button {
-      width: 70%; 
+      width: 70%;
     }
   </style>
 </head>
@@ -108,7 +93,7 @@
 <body>
   <div class="container-fluid" style="background-color: #002a22;">
     <div class="row align-items-center">
-      <div class="col">
+      <div class="col-auto">
         <button class="btn logo-button" id="logoButton">
           <img src="images/Logo.png" alt="Logo">
         </button>
@@ -125,28 +110,7 @@
   <h1 class="contact-us">Contact Us</h1>
 
   <div class="row">
-    <div class="col-md-6 order-2 order-md-1 mx-auto">
-      <form id="contactForm">
-        <div class="input-area">
-          <label for="name" class="form-label" style="color: white;">Name</label>
-          <input type="text" class="form-control" id="name" required placeholder="Enter your name">
-        </div>
-        <div class="input-area">
-          <label for="email" class="form-label" style="color: white;">Email</label>
-          <input type="email" class="form-control" id="email" required placeholder="Enter your email">
-        </div>
-        <div class="input-area">
-          <label for="message" class="form-label" style="color: white;">Message</label>
-          <textarea class="form-control" id="message" rows="5" required placeholder="Enter your message"></textarea>
-        </div>
-        <div class="input-area">
-          <button type="submit" class="btn send-button" style="background-color: #e8992a;">Send</button>
-        </div>
-      </form>
-      <div id="confirmationMessage" class="confirmation-message"></div>
-    </div>
-    
-    <div class="col-md-6 order-1 order-md-2 mx-auto">
+    <div class="col-md-6 order-md-2">
       <div class="map-container">
         <img src="images/Map.png" alt="Google Maps">
         <div class="business-info">
@@ -168,6 +132,27 @@
           </p>
         </div>
       </div>
+    </div>
+    
+    <div class="col-md-6 order-md-1">
+      <form id="contactForm">
+        <div class="input-area">
+          <label for="name" class="form-label" style="color: white;">Name</label>
+          <input type="text" class="form-control" id="name" required placeholder="Enter your name">
+        </div>
+        <div class="input-area">
+          <label for="email" class="form-label" style="color: white;">Email</label>
+          <input type="email" class="form-control" id="email" required placeholder="Enter your email">
+        </div>
+        <div class="input-area">
+          <label for="message" class="form-label" style="color: white;">Message</label>
+          <textarea class="form-control" id="message" rows="5" required placeholder="Enter your message"></textarea>
+        </div>
+        <div class="input-area">
+          <button type="submit" class="btn send-button" style="background-color: #e8992a;">Send</button>
+        </div>
+      </form>
+      <div id="confirmationMessage" class="confirmation-message"></div>
     </div>
   </div>
 
