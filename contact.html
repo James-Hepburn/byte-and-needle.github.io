@@ -74,6 +74,12 @@
     .col-md-12 p {
       color: white;
     }
+
+    .confirmation-message {
+      color: white;
+      text-align: center;
+      margin-top: 10px;
+    }
   </style>
 </head>
 
@@ -98,7 +104,7 @@
 
   <div class="row">
     <div class="col-md-6">
-      <form>
+      <form id="contactForm">
         <div class="mb-3">
           <label for="name" class="form-label" style="color: white;">Name</label>
           <input type="text" class="form-control" id="name" required placeholder="Enter your name">
@@ -113,27 +119,28 @@
         </div>
         <button type="submit" class="btn btn-primary" style="background-color: #e8992a; width: 66%;">Send</button>
       </form>
+      <div id="confirmationMessage" class="confirmation-message"></div>
     </div>
     <div class="col-md-6">
       <img src="images/Map.png" alt="Google Maps" style="width: 100%; max-width: 400px;">
-    </div>
-    <div class="col-md-12">
-      <h6 style="color: white;">Byte and Needle</h6>
-      <p>
-        277 Elgin St, Ottawa, ON, K2P 0H7<br>
-        byteandneedle@gmail.com<br>
-        613 - 864 - 2095<br>
-      </p>
-      <h6 style="color: white;">Hours</h6>
-      <p>
-        Mon. 10:00 a.m. - 5:00 p.m.<br>
-        Tue. 10:00 a.m. - 6:00 p.m.<br>
-        Wed. 10:00 a.m. - 6:00 p.m.<br>
-        Thu. 10:00 a.m. - 6:00 p.m.<br>
-        Fri. 10:00 a.m. - 6:00 p.m.<br>
-        Sat. 10:00 a.m. - 6:00 p.m.<br>
-        Sun. 10:00 a.m. - 5:00 p.m.<br>
-      </p>
+      <div class="col-md-12">
+        <h6 style="color: white;">Byte and Needle</h6>
+        <p>
+          277 Elgin St, Ottawa, ON, K2P 0H7<br>
+          byteandneedle@gmail.com<br>
+          613 - 864 - 2095<br>
+        </p>
+        <h6 style="color: white;">Hours</h6>
+        <p>
+          Mon. 10:00 a.m. - 5:00 p.m.<br>
+          Tue. 10:00 a.m. - 6:00 p.m.<br>
+          Wed. 10:00 a.m. - 6:00 p.m.<br>
+          Thu. 10:00 a.m. - 6:00 p.m.<br>
+          Fri. 10:00 a.m. - 6:00 p.m.<br>
+          Sat. 10:00 a.m. - 6:00 p.m.<br>
+          Sun. 10:00 a.m. - 5:00 p.m.<br>
+        </p>
+      </div>
     </div>
   </div>
 
@@ -186,6 +193,13 @@
       faqButton.addEventListener('click', function() {
         window.location.href = 'faq.html';
       });
+    });
+
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      // Perform form submission logic here
+      // Display confirmation message
+      document.getElementById('confirmationMessage').textContent = 'Message sent. We will be in touch shortly.';
     });
   </script>
 </body>
