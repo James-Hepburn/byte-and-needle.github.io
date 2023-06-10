@@ -156,6 +156,18 @@
         window.location.href = 'faq.html';
       });
     });
+    
+    document.addEventListener('DOMContentLoaded', function() {
+      var urlParams = new URLSearchParams(window.location.search);
+      var date = urlParams.get('date');
+      var time = urlParams.get('time');
+      var service = urlParams.get('service');
+      var expert = urlParams.get('expert');
+
+      var confirmationMessage = document.createElement('p');
+      confirmationMessage.innerHTML = "Your booking details:<br>Date: " + date + "<br>Time: " + time + "<br>Service: " + service + "<br>Expert: " + expert;
+      document.body.appendChild(confirmationMessage);
+    });
   </script>
 </body>
 </html>
