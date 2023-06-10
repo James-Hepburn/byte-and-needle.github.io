@@ -83,17 +83,15 @@
 
     .map-container {
       display: flex;
-      justify-content: flex-start;
+      justify-content: center;
+      align-items: flex-start;
+      margin-top: 20px;
     }
 
-    .map-container img {
-      width: 100%;
-      max-width: 400px;
-    }
-
-    .business-info {
-      color: white;
-      margin-left: 20px;
+    .contact-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
   </style>
 </head>
@@ -119,22 +117,24 @@
 
   <div class="row">
     <div class="col-md-6">
-      <form id="contactForm">
-        <div class="mb-3">
-          <label for="name" class="form-label" style="color: white;">Name</label>
-          <input type="text" class="form-control" id="name" required placeholder="Enter your name">
-        </div>
-        <div class="mb-3">
-          <label for="email" class="form-label" style="color: white;">Email</label>
-          <input type="email" class="form-control" id="email" required placeholder="Enter your email">
-        </div>
-        <div class="mb-3">
-          <label for="message" class="form-label" style="color: white;">Message</label>
-          <textarea class="form-control" id="message" rows="5" required placeholder="Enter your message"></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary" style="background-color: #e8992a; width: 66%;">Send</button>
-      </form>
-      <div id="confirmationMessage" class="confirmation-message"></div>
+      <div class="contact-container">
+        <form id="contactForm">
+          <div class="mb-3">
+            <label for="name" class="form-label" style="color: white;">Name</label>
+            <input type="text" class="form-control" id="name" required placeholder="Enter your name">
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label" style="color: white;">Email</label>
+            <input type="email" class="form-control" id="email" required placeholder="Enter your email">
+          </div>
+          <div class="mb-3">
+            <label for="message" class="form-label" style="color: white;">Message</label>
+            <textarea class="form-control" id="message" rows="5" required placeholder="Enter your message"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="background-color: #e8992a; width: 66%;">Send</button>
+        </form>
+        <div class="confirmation-message" id="confirmationMessage"></div>
+      </div>
     </div>
     <div class="col-md-6">
       <div class="map-container">
