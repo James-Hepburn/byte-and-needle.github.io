@@ -82,13 +82,6 @@
       margin-right: 30px;
     }
 
-    .map-container {
-      display: flex;
-      justify-content: flex-start;
-      margin-top: 15px;
-      margin-right: 200px;
-    }
-
     .map-container img {
       width: 100%;
       max-width: 400px;
@@ -147,26 +140,24 @@
       <div id="confirmationMessage" class="confirmation-message"></div>
     </div>
     <div class="col-md-6">
-      <div class="map-container">
-        <img src="images/Map.png" alt="Google Maps">
-        <div class="business-info">
-          <h6>Byte and Needle</h6>
-          <p>
-            277 Elgin St, Ottawa, ON, K2P 0H7<br>
-            byteandneedle@gmail.com<br>
-            613 - 864 - 2095<br>
-          </p>
-          <h6>Hours</h6>
-          <p>
-            Mon. 10:00 a.m. - 5:00 p.m.<br>
-            Tue. 10:00 a.m. - 6:00 p.m.<br>
-            Wed. 10:00 a.m. - 6:00 p.m.<br>
-            Thu. 10:00 a.m. - 6:00 p.m.<br>
-            Fri. 10:00 a.m. - 6:00 p.m.<br>
-            Sat. 10:00 a.m. - 6:00 p.m.<br>
-            Sun. 10:00 a.m. - 5:00 p.m.<br>
-          </p>
-        </div>
+      <img src="images/Map.png" alt="Google Maps">
+      <div class="business-info">
+        <h6>Byte and Needle</h6>
+        <p>
+          277 Elgin St, Ottawa, ON, K2P 0H7<br>
+          byteandneedle@gmail.com<br>
+          613 - 864 - 2095<br>
+        </p>
+        <h6>Hours</h6>
+        <p>
+          Mon. 10:00 a.m. - 5:00 p.m.<br>
+          Tue. 10:00 a.m. - 6:00 p.m.<br>
+          Wed. 10:00 a.m. - 6:00 p.m.<br>
+          Thu. 10:00 a.m. - 6:00 p.m.<br>
+          Fri. 10:00 a.m. - 6:00 p.m.<br>
+          Sat. 10:00 a.m. - 6:00 p.m.<br>
+          Sun. 10:00 a.m. - 5:00 p.m.<br>
+        </p>
       </div>
     </div>
   </div>
@@ -179,7 +170,7 @@
         window.location.href = 'index.html';
       });
     });
-    
+   
     document.addEventListener('DOMContentLoaded', function() {
       var servicesButton = document.getElementById('servicesButton');
       servicesButton.addEventListener('click', function() {
