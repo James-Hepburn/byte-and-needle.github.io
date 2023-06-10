@@ -17,8 +17,6 @@
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
-      display: flex;
-      align-items: center;
     }
 
     .nav-button {
@@ -96,6 +94,12 @@
     button.send-button {
       width: 100%; 
     }
+    
+    .centered-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
   </style>
 </head>
 
@@ -142,25 +146,27 @@
       </div>
 
       <div class="col-md-6 order-1 order-md-2">
-        <div class="map-container">
-          <img src="images/Map.png" alt="Google Maps">
-          <div class="business-info">
-            <h6 style="color: #e8992a;">Byte and Needle</h6>
-            <p>
-              277 Elgin St, Ottawa, ON, K2P 0H7<br>
-              byteandneedle@gmail.com<br>
-              613 - 864 - 2095<br>
-            </p>
-            <h6 style="color: #e8992a;">Hours</h6>
-            <p>
-              Mon. 10:00 a.m. - 5:00 p.m.<br>
-              Tue.&nbsp;&nbsp; 10:00 a.m. - 6:00 p.m.<br>
-              Wed.&nbsp; 10:00 a.m. - 6:00 p.m.<br>
-              Thu.&nbsp;&nbsp; 10:00 a.m. - 6:00 p.m.<br>
-              Fri.&nbsp;&nbsp;&nbsp;&nbsp; 10:00 a.m. - 6:00 p.m.<br>
-              Sat.&nbsp;&nbsp;&nbsp; 10:00 a.m. - 6:00 p.m.<br>
-              Sun.&nbsp;&nbsp; 10:00 a.m. - 5:00 p.m.<br>
-            </p>
+        <div class="centered-content"> <!-- Added container to center the content -->
+          <div class="map-container">
+            <img src="images/Map.png" alt="Google Maps">
+            <div class="business-info">
+              <h6 style="color: #e8992a;">Byte and Needle</h6>
+              <p>
+                277 Elgin St, Ottawa, ON, K2P 0H7<br>
+                byteandneedle@gmail.com<br>
+                613 - 864 - 2095<br>
+              </p>
+              <h6 style="color: #e8992a;">Hours</h6>
+              <p>
+                Mon. 10:00 a.m. - 5:00 p.m.<br>
+                Tue.&nbsp;&nbsp; 10:00 a.m. - 6:00 p.m.<br>
+                Wed.&nbsp; 10:00 a.m. - 6:00 p.m.<br>
+                Thu.&nbsp;&nbsp; 10:00 a.m. - 6:00 p.m.<br>
+                Fri.&nbsp;&nbsp;&nbsp;&nbsp; 10:00 a.m. - 6:00 p.m.<br>
+                Sat.&nbsp;&nbsp;&nbsp; 10:00 a.m. - 6:00 p.m.<br>
+                Sun.&nbsp;&nbsp; 10:00 a.m. - 5:00 p.m.<br>
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -222,11 +228,8 @@
       var contactForm = document.getElementById('contactForm');
       contactForm.addEventListener('submit', function(event) {
         event.preventDefault();
-        var name = document.getElementById('name').value;
-        var email = document.getElementById('email').value;
-        var message = document.getElementById('message').value;
         var confirmationMessage = document.getElementById('confirmationMessage');
-        confirmationMessage.innerHTML = 'Thank you, ' + name + '! Your message has been sent.';
+        confirmationMessage.innerText = 'Thank you for your message! We will get back to you soon.';
         contactForm.reset();
       });
     });
