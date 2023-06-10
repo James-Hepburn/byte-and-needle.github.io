@@ -63,21 +63,20 @@
       padding-left: 0;
     }
     
+    input.form-control,
+    textarea.form-control {
+      background-color: #002a22;
+      color: white;
+      width: 60%;
+    }
+
     .input-area {
       margin-bottom: 20px;
-    }
-
-    .input-area label,
-    .input-area input,
-    .input-area textarea {
-      width: 100%;
-    }
-
-    .input-area button {
-      width: 100%;
+      margin-right: 50px; 
     }
 
     .confirmation-message {
+      color: white;
       text-align: center;
       margin-top: 10px;
     }
@@ -86,6 +85,7 @@
       display: flex;
       justify-content: flex-start;
       margin-top: 10px;
+      margin-left: -50px; 
     }
 
     .map-container img {
@@ -96,6 +96,10 @@
     .business-info {
       color: white;
       margin-left: 20px;
+    }
+
+    button.send-button {
+      width: 60%; 
     }
   </style>
 </head>
@@ -135,7 +139,7 @@
           <textarea class="form-control" id="message" rows="5" required placeholder="Enter your message"></textarea>
         </div>
         <div class="input-area">
-          <button type="submit" class="btn btn-primary" style="background-color: #e8992a; width: 100%;">Send</button>
+          <button type="submit" class="btn send-button" style="background-color: #e8992a; width: 100%;">Send</button>
         </div>
       </form>
       <div id="confirmationMessage" class="confirmation-message"></div>
