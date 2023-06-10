@@ -24,9 +24,9 @@
       color: white;
       border: none;
       font-size: 18px;
-      height: 6vh;
-      line-height: 6vh;
-      margin-left: 1vw;
+      height: 100px;
+      line-height: 100px;
+      margin-left: 15px;
       vertical-align: middle;
       padding-top: 0;
     }
@@ -36,8 +36,8 @@
       border: none;
       padding: 0;
       outline: none;
-      height: 6vh;
-      width: 15vw;
+      height: 100px;
+      width: 150px;
       overflow: hidden;
       vertical-align: middle;
       padding-top: 0;
@@ -56,7 +56,7 @@
       font-size: 4vw; 
       text-align: center;
       text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
-      margin-top: 2vh; 
+      margin-top: 20px; 
     }
     
     .col-auto {
@@ -71,22 +71,22 @@
     }
 
     .input-area {
-      margin-bottom: 2vh;
-      margin-left: 10vw; 
+      margin-bottom: 20px;
+      margin-left: 170px; 
     }
 
     .confirmation-message {
       color: white;
       text-align: center;
-      margin-top: 1vh;
-      margin-right: 3vw;
+      margin-top: 10px;
+      margin-right: 30px;
     }
 
     .map-container {
       display: flex;
       justify-content: flex-start;
-      margin-top: 1vh;
-      margin-left: -10vw;
+      margin-top: 15px;
+      margin-left: -135px;
     }
 
     .map-container img {
@@ -96,13 +96,31 @@
 
     .business-info {
       color: white;
-      margin-top: 1vh;
-      margin-left: 3vw;
-      margin-bottom: 2vh;
+      margin-top: 15px;
+      margin-left: 55px;
+      margin-bottom: 30px;
     }
 
     button.send-button {
       width: 70%; 
+    }
+
+    /* Mobile Styles */
+    @media (max-width: 767px) {
+      .nav-button,
+      .logo-button {
+        height: 60px;
+        line-height: 60px;
+        font-size: 14px;
+      }
+
+      .contact-us {
+        font-size: 20px;
+      }
+
+      .input-area {
+        margin-left: 0;
+      }
     }
   </style>
 </head>
@@ -126,47 +144,66 @@
 
   <h1 class="contact-us">Contact Us</h1>
 
-  <div class="container input-area">
+  <div class="container">
     <div class="row">
-      <div class="col-md-6">
-        <input type="text" class="form-control" placeholder="Name">
+      <div class="col-md-6 order-2 order-md-1">
+        <form id="contactForm">
+          <div class="input-area">
+            <label for="name" class="form-label" style="color: white;">Name</label>
+            <input type="text" class="form-control" id="name" required placeholder="Enter your name">
+          </div>
+          <div class="input-area">
+            <label for="email" class="form-label" style="color: white;">Email</label>
+            <input type="email" class="form-control" id="email" required placeholder="Enter your email">
+          </div>
+          <div class="input-area">
+            <label for="message" class="form-label" style="color: white;">Message</label>
+            <textarea class="form-control" id="message" rows="5" required placeholder="Enter your message"></textarea>
+          </div>
+          <div class="input-area">
+            <button type="submit" class="btn send-button" style="background-color: #e8992a;">Send</button>
+          </div>
+        </form>
+        <div id="confirmationMessage" class="confirmation-message"></div>
       </div>
-      <div class="col-md-6">
-        <input type="email" class="form-control" placeholder="Email">
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-12">
-        <textarea class="form-control" placeholder="Message"></textarea>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-12">
-        <button class="btn btn-primary send-button">Send Message</button>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-12">
-        <p class="confirmation-message">Thank you for contacting us!</p>
+
+      <div class="col-md-6 order-1 order-md-2">
+        <div class="map-container">
+          <img src="images/Map.png" alt="Google Maps">
+          <div class="business-info">
+            <h6 style="color: #e8992a;">Byte and Needle</h6>
+            <p>
+              277 Elgin St, Ottawa, ON, K2P 0H7<br>
+              byteandneedle@gmail.com<br>
+              613 - 864 - 2095<br>
+            </p>
+            <h6 style="color: #e8992a;">Hours</h6>
+            <p>
+              Mon. 10:00 a.m. - 5:00 p.m.<br>
+              Tue.&nbsp;&nbsp; 10:00 a.m. - 6:00 p.m.<br>
+              Wed.&nbsp; 10:00 a.m. - 6:00 p.m.<br>
+              Thu.&nbsp;&nbsp; 10:00 a.m. - 6:00 p.m.<br>
+              Fri.&nbsp;&nbsp;&nbsp;&nbsp; 10:00 a.m. - 6:00 p.m.<br>
+              Sat.&nbsp;&nbsp;&nbsp; 10:00 a.m. - 6:00 p.m.<br>
+              Sun.&nbsp;&nbsp; 10:00 a.m. - 5:00 p.m.<br>
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6">
-        <div class="map-container">
-          <img src="images/map.png" alt="Map">
-        </div>
-      </div>
-      <div class="col-md-6">
-        <div class="business-info">
-          <p>Address: 123 Main St, City</p>
-          <p>Phone: 123-456-7890</p>
-          <p>Email: info@byteandneedle.com</p>
-        </div>
-      </div>
-    </div>
-  </div>
+  <script src="js/bootstrap.js"></script>
+  <script>
+    document.getElementById("contactForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+      var confirmationMessage = document.getElementById("confirmationMessage");
+      confirmationMessage.innerHTML = "Thank you for your message!";
+      confirmationMessage.style.display = "block";
+      setTimeout(function() {
+        confirmationMessage.style.display = "none";
+      }, 3000);
+    });
+  </script>
 </body>
 </html>
