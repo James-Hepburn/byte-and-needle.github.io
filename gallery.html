@@ -74,10 +74,10 @@
         </button>
         <button class="btn nav-button" id="servicesButton">SERVICES</button>
         <button class="btn nav-button" id="galleryButton">GALLERY</button>
-        <button class="btn nav-button">ARTISTS</button>
-        <button class="btn nav-button">CONTACT</button>
-        <button class="btn nav-button">BOOKING</button>
-        <button class="btn nav-button">FAQ</button>
+        <button class="btn nav-button" id="artistsButton">ARTISTS</button>
+        <button class="btn nav-button" id="contactButton">CONTACT</button>
+        <button class="btn nav-button" id="bookingButton">BOOKING</button>
+        <button class="btn nav-button" id="faqButton">FAQ</button>
       </div>
     </div>
   </div>
@@ -104,6 +104,34 @@
       var galleryButton = document.getElementById('galleryButton');
       galleryButton.addEventListener('click', function() {
         window.location.href = 'gallery.html';
+      });
+    });
+    
+    document.addEventListener('DOMContentLoaded', function() {
+      var artistsButton = document.getElementById('artistsButton');
+      artistsButton.addEventListener('click', function() {
+        window.location.href = 'artists.html';
+      });
+    });
+    
+    document.addEventListener('DOMContentLoaded', function() {
+      var contactButton = document.getElementById('contactButton');
+      contactButton.addEventListener('click', function() {
+        window.location.href = 'contact.html';
+      });
+    });
+    
+    document.addEventListener('DOMContentLoaded', function() {
+      var bookingButton = document.getElementById('bookingButton');
+      bookingButton.addEventListener('click', function() {
+        window.location.href = 'booking.html';
+      });
+    });
+    
+    document.addEventListener('DOMContentLoaded', function() {
+      var faqButton = document.getElementById('faqButton');
+      faqButton.addEventListener('click', function() {
+        window.location.href = 'faq.html';
       });
     });
   </script>
