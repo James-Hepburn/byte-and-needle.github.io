@@ -151,7 +151,7 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-6 offset-md-3"> 
-        <img src="images/Map.png" alt="Google Maps" class="map-image">
+        <img src="images/Map.png" alt="Google Maps" class="map-image" style="width: 100%;">
         <div class="business-info">
           <h6 style="color: #e8992a;">Byte and Needle</h6>
           <p>
@@ -227,11 +227,14 @@
 
     document.addEventListener('DOMContentLoaded', function() {
       var contactForm = document.getElementById('contactForm');
+      var confirmationMessage = document.getElementById('confirmationMessage');
       contactForm.addEventListener('submit', function(event) {
         event.preventDefault();
-        var confirmationMessage = document.getElementById('confirmationMessage');
-        confirmationMessage.textContent = 'Your message has been sent.';
+        var name = document.getElementById('name').value;
+        var email = document.getElementById('email').value;
+        var message = document.getElementById('message').value;
         contactForm.reset();
+        confirmationMessage.textContent = 'Message sent successfully!';
       });
     });
   </script>
