@@ -158,16 +158,19 @@
     });
     
     document.addEventListener('DOMContentLoaded', function() {
-      var urlParams = new URLSearchParams(window.location.search);
-      var date = urlParams.get('date');
-      var time = urlParams.get('time');
-      var service = urlParams.get('service');
-      var expert = urlParams.get('expert');
-
+      var url = new URLSearchParams(window.location.search);
+      var date = url.get('date');
+      var time = url.get('time');
+      var service = url.get('service');
+      var expert = url.get('expert');
+      var bookingNumber = Math.floor(Math.random() * (99999 - 10000 + 1)) + 10000;
       var confirmationMessage = document.createElement('p');
-      confirmationMessage.innerHTML = "Your booking details:<br>Date: " + date + "<br>Time: " + time + "<br>Service: " + service + "<br>Expert: " + expert;
+      confirmationMessage.innerHTML = "Your appointment request has been received. You will receive an email to confirm your request.<br>One of our artists will reach out to you to confirm your appointment and to discuss the details of your requested service.<br><br>Booking number: " + bookingNumber + "<br>Time: " + time + "<br>Date: " + date + "<br>Service: " + service + "<br>Expert: " + expert;
+      confirmationMessage.style.textAlign = "center";
+      confirmationMessage.style.color = "white";
       document.body.appendChild(confirmationMessage);
     });
+
   </script>
 </body>
 </html>
