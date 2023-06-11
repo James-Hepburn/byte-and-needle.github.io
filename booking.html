@@ -218,11 +218,8 @@
         var time = document.getElementById('time').value;
         var service = document.getElementById('service').value;
         var expert = document.getElementById('expert').value;
-        localStorage.setItem('date', date);
-        localStorage.setItem('time', time);
-        localStorage.setItem('service', service);
-        localStorage.setItem('expert', expert);
-        window.location.href = 'confirmation.html';
+        var confirmationURL = 'confirmation.html?time=' + encodeURIComponent(time) + '&service=' + encodeURIComponent(service) + '&expert=' + encodeURIComponent(expert);
+      window.location.href = confirmationURL;
       });
     });
   </script>
